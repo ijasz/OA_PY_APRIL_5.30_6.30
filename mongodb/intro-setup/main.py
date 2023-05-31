@@ -57,8 +57,10 @@ user = db['user']
 
 # findone = user.find_one(query, field)
 
-query = {"location" : "pondy"}
-field = {"_id" : 0, "age" : 1}
+#query = {"location" : "pondy"}
+#field = {"_id" : 0, "age" : 1}
+
+user.vote
 
 find = user.find(query, field)
 
