@@ -4,7 +4,7 @@ from bson.objectid import ObjectId
 
 
 
-uri = "mongodb+srv://root:mCEqu3blkTNdMceK@realmcluster.zmek8.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://ijass:FOfZXmMnVeJWqmwp@ocean-class.mscbll9.mongodb.net/?retryWrites=true&w=majority"
 
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
@@ -24,10 +24,11 @@ client = MongoClient(uri, server_api=ServerApi('1'))
 
 # create db
 db = client["OA-PY-5-30-6-30"]
-db2 = client["OA-PY-5-30-6-30"]
+db2 = client["sample_airbnb"]
 
 # create collection
 user = db['user']
+# review = db2['listingsAndReviews']
 
 # user.insert_one({"name": "ocean", "age": 20, "location": "pondy"})
 
@@ -60,13 +61,65 @@ user = db['user']
 #query = {"location" : "pondy"}
 #field = {"_id" : 0, "age" : 1}
 
-user.vote
 
-find = user.find(query, field)
+# find = user.find(query, field)
 
-for i in find:
-    print(i)
+# for i in find:
+#     print(i)
 
 # print(find)
 
+# in operator
+# query = {"location" : {"$in" : ["pondy", "chennai"]}}
 
+# and operator
+# query = {"location" : "pondy", "age" : {"$gt" : 20}}
+
+# or operator
+# query = {"$or" : [{"location" : "pondy"},  {"age" : {"$gt" : 25} }]}
+
+# and / or
+# query = {"location" : "pondy", "$or" : [{"age" : {"$gt" : 25}}, {"name" : "ocean"}]}
+
+# findLocation = user.find()
+
+# sort => ascending => 1  decending => -1
+
+# findLocation = user.find().sort("age")
+# findLocation = user.find().sort("age", -1)
+
+# for i in findLocation:
+#     print(i)
+
+# myquery = { "age": 33}
+
+# deletedObj = user.delete_one(myquery)
+# deletedObj = user.delete_many()
+
+# print(deletedObj)
+
+
+# Drop collection
+
+# print(review.drop())
+
+
+# update one
+
+# query = {"_id" : ObjectId("64774106d54be96836d8dafa")}
+# updateQuery = {"$set" : {"location" : "coast"}}
+
+# user.update_one(query, updateQuery)
+
+# for i in user.find():
+#     print(i)
+
+# update many
+
+# query = {"location" : "coast"}
+# updateQuery = {"$set" : {"location" : "pondy"}}
+
+# user.update_many(query, updateQuery)
+
+# for i in user.find():
+#     print(i)

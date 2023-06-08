@@ -124,3 +124,6 @@ user = db['user']
 # print(major, "major")
 # print(minor, "minor")
 
+
+
+
