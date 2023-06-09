@@ -19,7 +19,7 @@ class Person:
         #     print("FirstName : ", self.firstname)
         if(args["location"]):
                 self.location = args["location"]
-                print("Location : ", self.location)
+                print("Location: ", self.location)
         # print("LastName       : ", self.lastname)
         # print("Age            : ", self.age)
         # print("Location       : ", self.location)
@@ -30,10 +30,10 @@ obj1 = Person()
 obj1.firstname = "ocean"
 obj1.lastname  = "academy"
 obj1.age       = 25
-obj1.location  = "pondy"
+obj1.location  = "chennai"
 
 
 obj1.getDetails()
 
-obj1.updateDetails(location = "chennai")
+obj1.updateDetails(location = "lawspet, pondy")
 # obj1.getFullname()
