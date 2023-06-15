@@ -1,4 +1,4 @@
-import datetime
+
 
 
 class Student_Details:
@@ -18,7 +18,14 @@ class Mark_list:
         self.Maths = Maths
         self.Science = Science
         self.Social = Social
+
+class Mark_Details:
+
+    def __init__(self, average, percentage):
         
+        self.average = average
+        self.percentage = percentage
+
     
     def getFullname(self):
         return self.firstname + " " + self.lastname
@@ -27,7 +34,9 @@ class Mark_list:
     #     currentYear = datetime.datetime.now().year
     #     return currentYear - self.age
     def getpercentage(self):
-        markStatement = self.Tamil + self.English + self.Maths + self.Science + self.Social . Mark_list / 5
+        markStatement = self.Tamil + self.English + self.Maths + self.Science + self.Social
+        self.average = markStatement/ 5.0
+        self.percentage = (markStatement / 500.0) * 100 
         return markStatement
 
     
@@ -39,7 +48,7 @@ print(obj.lastname)
 print(obj.age)
 print(obj.address)
 
-obj = Mark_list(80, 90, 89, 97, 88)
+obj = Mark_list(80, 90, 89, 97, 88,)
 
 print(obj.Tamil)
 print(obj.English)
@@ -47,6 +56,10 @@ print(obj.Maths)
 print(obj.Science)
 print(obj.Social)
 
+obj = Mark_Detail()
+
+print(obj.average)
+print(obj.percentage)
 # print(obj.getFullname())
 # print(obj.getBirthYear())
 print(obj. getpercentage())
