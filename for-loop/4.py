@@ -1,8 +1,8 @@
 row = 3
 for i in range(1, row+1):
-    # for j in range(0, i+1):
+    for j in range(1, i-1):
         print("*", end=' ')
-    # print("\r")
+    print("\r")
 
 for i in range(row,0,-1):
     for j in range(1, i-0):
